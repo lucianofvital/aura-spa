@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Aura Spa | Estética Avançada e Bem-Estar em Casa Forte, Recife</title>
+    <meta name="description" content="Descubra o Aura Spa em Recife. Tratamentos de estética avançada com a Dra. Raquel Póvoas: Botox, limpeza de pele e escleroterapia. Agende sua avaliação!">
+    <meta name="keywords" content="clínica de estética Recife, spa Casa Forte, botox Recife, Dra Raquel Póvoas, estética avançada Pernambuco, escleroterapia, limpeza de pele">
+    <meta name="author" content="Aura Spa">
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="Aura Spa | Estética Avançada em Recife">
+    <meta property="og:description" content="Tratamentos de estética avançada com a Dra. Raquel Póvoas. Eleve sua autoestima com naturalidade e sofisticação no coração de Casa Forte.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN com Configuração Customizada) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2F4F4F',
+                        secondary: '#E5D3C8',
+                        accent: '#C5A880',
+                        light: '#FAF9F6',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 30px -10px rgba(47, 79, 79, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Aura Spa - Estética Avançada",
+      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "@id": "",
+      "url": "https://www.auraspa.com.br",
+      "telephone": "+5581900000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estrada das Ubaias, 20",
+        "addressLocality": "Recife",
+        "addressRegion": "PE",
+        "postalCode": "52061-080",
+        "addressCountry": "BR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "96"
+      }
+    }
+    </script>
+</head>
+<body class="bg-light text-dark font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-light">
+
+    <!-- Header & Nav -->
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="#" class="text-2xl font-serif font-bold text-primary tracking-widest z-50">AURA<span class="text-accent font-sans text-lg ml-1">SPA</span></a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 items-center">
+            <a href="#sobre" class="text-sm font-medium hover:text-primary transition-colors link-hover">A Clínica</a>
+            <a href="#servicos" class="text-sm font-medium hover:text-primary transition-colors link-hover">Tratamentos</a>
+            <a href="#depoimentos" class="text-sm font-medium hover:text-primary transition-colors link-hover">Depoimentos</a>
+            <a href="#faq" class="text-sm font-medium hover:text-primary transition-colors link-hover">FAQ</a>
+            <a href="#contato" class="btn-primary text-sm px-6 py-2.5 rounded-full text-light bg-primary hover:bg-dark transition-all duration-300 shadow-md">Agendar Avaliação</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden z-50 p-2 text-primary focus:outline-none" aria-label="Abrir menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-light/95 backdrop-blur-md z-40 hidden flex-col justify-center items-center gap-8 px-6">
+        <a href="#sobre" class="mobile-link text-2xl font-serif text-primary">A Clínica</a>
+        <a href="#servicos" class="mobile-link text-2xl font-serif text-primary">Tratamentos</a>
+        <a href="#depoimentos" class="mobile-link text-2xl font-serif text-primary">Depoimentos</a>
+        <a href="#faq" class="mobile-link text-2xl font-serif text-primary">FAQ</a>
+        <a href="#contato" class="mobile-link btn-primary text-lg px-8 py-3 rounded-full text-light bg-primary w-full max-w-xs text-center mt-4">Agendar Avaliação</a>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center pt-24 pb-16 px-6 md:px-12 lg:px-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+                <div class="hero-content z-10 flex flex-col items-start max-w-xl">
+                    <span class="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-xs font-semibold uppercase tracking-wider mb-6 hero-elem">Estética Avançada em Casa Forte</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary leading-tight mb-6 hero-elem">
+                        Revele sua melhor versão com <span class="text-accent italic">naturalidade</span> e sofisticação.
+                    </h1>
+                    <p class="text-lg text-dark/80 mb-8 font-light leading-relaxed hero-elem">
+                        Um refúgio urbano dedicado ao seu bem-estar. Tratamentos faciais e corporais focados em realçar sua beleza autêntica, conduzidos pela excelência da Dra. Raquel Póvoas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto hero-elem">
+                        <a href="https://wa.me/5581900000000" target="_blank" class="flex items-center justify-center gap-2 bg-primary text-light px-8 py-4 rounded-full font-medium hover:bg-dark transition-colors shadow-lg shadow-primary/20">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Agendar Avaliação
+                        </a>
+                        <a href="#servicos" class="flex items-center justify-center px-8 py-4 rounded-full font-medium text-primary border border-primary/20 hover:border-primary hover:bg-primary/5 transition-colors">
+                            Conhecer Tratamentos
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image relative h-[60vh] lg:h-[80vh] w-full rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1614859324967-bdf45d9cc9db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ambiente acolhedor do Aura Spa" class="absolute inset-0 w-full h-full object-cover parallax-bg" fetchpriority="high">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Banner -->
+        <section class="bg-primary text-light py-8 px-6 border-y border-accent/20">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left reveal-up">
+                <div class="flex gap-1 text-accent">
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                </div>
+                <div>
+                    <p class="font-serif text-xl">"A excelência que você merece."</p>
+                    <p class="text-sm text-light/70 font-light mt-1">Mais de 90 avaliações perfeitas (5.0) no Google.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre / Dra. Raquel -->
+        <section id="sobre" class="py-24 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-premium reveal-up">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Raquel Póvoas em atendimento humanizado" class="w-full h-full object-cover parallax-img" loading="lazy">
+                    <div class="absolute bottom-6 left-6 right-6 bg-light/90 backdrop-blur p-6 rounded-xl border border-white/50">
+                        <p class="font-serif text-xl text-primary font-bold">Dra. Raquel Póvoas</p>
+                        <p class="text-sm text-dark/70 mt-1">Especialista em Harmonização Natural</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 reveal-up delay-100">
+                    <h2 class="text-3xl md:text-4xl font-serif text-primary font-bold leading-tight">Um ambiente pensado para o seu <span class="italic text-accent">relaxamento</span> profundo.</h2>
+                    <p class="text-dark/80 font-light leading-relaxed">
+                        No Aura Spa, acreditamos que a estética avançada deve caminhar de mãos dadas com o bem-estar mental e físico. Localizado no coração de Casa Forte, nosso espaço conta com uma vista panorâmica revigorante da cidade, projetado para ser seu refúgio diário.
+                    </p>
+                    <p class="text-dark/80 font-light leading-relaxed">
+                        A Dra. Raquel Póvoas conduz cada protocolo com ciência, empatia e um rigoroso senso estético. Nosso objetivo não é transformar seus traços, mas lapidar a beleza natural que já existe em você, garantindo resultados elegantes e harmoniosos.
+                    </p>
+                    <ul class="space-y-4 mt-4">
+                        <li class="flex items-center gap-3 text-dark/90 font-medium">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-accent"></i> Atendimento altamente acolhedor e personalizado.
+                        </li>
+                        <li class="flex items-center gap-3 text-dark/90 font-medium">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-accent"></i> Foco absoluto em resultados naturais.
+                        </li>
+                        <li class="flex items-center gap-3 text-dark/90 font-medium">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-accent"></i> Ambiente premium com vista exclusiva.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="py-24 bg-secondary/10 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+                    <h2 class="text-3xl md:text-4xl font-serif text-primary font-bold mb-4">Tratamentos Assinatura</h2>
+                    <p class="text-dark/70 font-light">Protocolos selecionados para rejuvenescer, tratar e cuidar da sua pele com a mais alta tecnologia e segurança.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 stagger-grid">
+                    <!-- Card 1 -->
+                    <div class="bg-light p-8 rounded-2xl shadow-premium border border-transparent hover:border-accent/30 transition-all duration-300 group service-card flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-full bg-secondary/40 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="sparkles" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-primary mb-3">Toxina Botulínica</h3>
+                        <p class="text-dark/70 font-light text-sm mb-8 flex-grow">Atenuação de rugas dinâmicas e linhas de expressão com dosagens precisas, mantendo o movimento natural do rosto. Esqueça o aspecto "congelado".</p>
+                        <a href="https://wa.me/5581900000000?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Botox" target="_blank" class="text-primary font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors mt-auto">
+                            Saber mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-light p-8 rounded-2xl shadow-premium border border-transparent hover:border-accent/30 transition-all duration-300 group service-card flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-full bg-secondary/40 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="activity" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-primary mb-3">Escleroterapia</h3>
+                        <p class="text-dark/70 font-light text-sm mb-8 flex-grow">O padrão ouro na remoção de microvarizes (vasinhos) estéticas. Protocolo confortável que devolve a beleza e a uniformidade para suas pernas.</p>
+                        <a href="https://wa.me/5581900000000?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20Escleroterapia" target="_blank" class="text-primary font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors mt-auto">
+                            Saber mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-light p-8 rounded-2xl shadow-premium border border-transparent hover:border-accent/30 transition-all duration-300 group service-card flex flex-col h-full">
+                        <div class="w-14 h-14 rounded-full bg-secondary/40 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <i data-lucide="droplets" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-primary mb-3">Limpeza de Pele Profunda</h3>
+                        <p class="text-dark/70 font-light text-sm mb-8 flex-grow">Mais que uma extração, um verdadeiro spa facial. Remove impurezas, desobstrui poros e devolve o viço natural com ativos hidratantes premium.</p>
+                        <a href="https://wa.me/5581900000000?text=Olá,%20gostaria%20de%20agendar%20uma%20Limpeza%20de%20Pele" target="_blank" class="text-primary font-semibold text-sm flex items-center gap-2 group-hover:text-accent transition-colors mt-auto">
+                            Saber mais <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="py-24 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 reveal-up">
+                    <div class="max-w-xl">
+                        <h2 class="text-3xl md:text-4xl font-serif text-primary font-bold mb-4">Experiências Reais</h2>
+                        <p class="text-dark/70 font-light">O que nossas pacientes dizem sobre os momentos vividos no Aura Spa.</p>
+                    </div>
+                    <div class="flex items-center gap-2 text-primary font-medium bg-light px-4 py-2 rounded-lg border border-primary/10 shadow-sm">
+                        <i data-lucide="star" class="w-5 h-5 fill-accent text-accent"></i> 5.0 no Google
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 stagger-testimonials">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                        <div class="flex gap-1 text-accent">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-dark/80 italic font-serif text-lg leading-relaxed flex-grow">"Dra Raquel é muito competente! Conseguiu um resultado super natural no meu botox, exatamente como eu queria. Zero aspecto paralisado."</p>
+                        <p class="text-sm font-semibold text-primary mt-4">— Mariana T.</p>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                        <div class="flex gap-1 text-accent">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-dark/80 italic font-serif text-lg leading-relaxed flex-grow">"Ambiente totalmente acolhedor. Fiz a limpeza de pele e quase dormi na maca de tão relaxante. Produtos excelentes."</p>
+                        <p class="text-sm font-semibold text-primary mt-4">— Camila F.</p>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
+                        <div class="flex gap-1 text-accent">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-dark/80 italic font-serif text-lg leading-relaxed flex-grow">"Consultório aconchegante com uma vista linda. A escleroterapia foi super tranquila, a Dra tem uma mão maravilhosa."</p>
+                        <p class="text-sm font-semibold text-primary mt-4">— Juliana R.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-24 bg-primary text-light px-6 md:px-12 lg:px-24">
+            <div class="max-w-3xl mx-auto reveal-up">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-12 text-center text-secondary">Dúvidas Frequentes</h2>
+                
+                <div class="flex flex-col gap-4">
+                    <!-- FAQ Item -->
+                    <div class="faq-item border-b border-light/20 pb-4">
+                        <button class="faq-btn w-full flex justify-between items-center py-4 text-left font-serif text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg" aria-expanded="false">
+                            <span>O botox deixa o rosto sem expressão?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 text-accent"></i>
+                        </button>
+                        <div class="faq-content overflow-hidden h-0 transition-all duration-300 opacity-0">
+                            <p class="py-4 text-light/80 font-light text-sm leading-relaxed">
+                                De forma alguma. A técnica utilizada pela Dra. Raquel prioriza a naturalidade. Aplicamos doses precisas apenas nos músculos necessários, suavizando as rugas enquanto mantemos suas expressões faciais vivas e harmoniosas.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item -->
+                    <div class="faq-item border-b border-light/20 pb-4">
+                        <button class="faq-btn w-full flex justify-between items-center py-4 text-left font-serif text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg" aria-expanded="false">
+                            <span>A escleroterapia (aplicação de vasinhos) dói?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 text-accent"></i>
+                        </button>
+                        <div class="faq-content overflow-hidden h-0 transition-all duration-300 opacity-0">
+                            <p class="py-4 text-light/80 font-light text-sm leading-relaxed">
+                                O procedimento é minimamente invasivo e utilizamos agulhas ultrafinas. O desconforto é muito leve, descrito pela maioria das pacientes como picadinhas suportáveis. Técnicas de resfriamento local podem ser usadas para maior conforto.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item -->
+                    <div class="faq-item border-b border-light/20 pb-4">
+                        <button class="faq-btn w-full flex justify-between items-center py-4 text-left font-serif text-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg" aria-expanded="false">
+                            <span>Como funciona a avaliação?</span>
+                            <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 text-accent"></i>
+                        </button>
+                        <div class="faq-content overflow-hidden h-0 transition-all duration-300 opacity-0">
+                            <p class="py-4 text-light/80 font-light text-sm leading-relaxed">
+                                A avaliação é o momento mais importante do seu cuidado. Conversamos sobre suas queixas, analisamos sua pele ou estrutura facial/corporal detalhadamente, e criamos um protocolo exclusivo que atenda seus objetivos com segurança.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato & Localização -->
+        <section id="contato" class="py-24 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-up">
+                    <h2 class="text-3xl md:text-4xl font-serif text-primary font-bold mb-6">Pronta para revelar sua melhor versão?</h2>
+                    <p class="text-dark/80 font-light mb-10">Agende sua avaliação e descubra o plano de tratamento ideal para você em um ambiente exclusivo e acolhedor.</p>
+                    
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-primary">Localização</p>
+                                <p class="text-dark/70 text-sm">Estrada das Ubaias, 20<br>Casa Forte, Recife - PE</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-primary">Contato</p>
+                                <p class="text-dark/70 text-sm">+55 (81) 90000-0000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-primary shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-primary">Horário de Funcionamento</p>
+                                <p class="text-dark/70 text-sm">Seg a Sex: 08h às 19h<br>Sábados: 08h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5581900000000" target="_blank" class="inline-flex items-center gap-3 bg-primary text-light px-8 py-4 rounded-full font-medium hover:bg-dark transition-all duration-300 shadow-lg shadow-primary/20 group">
+                        Falar no WhatsApp
+                        <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="h-[400px] w-full rounded-2xl overflow-hidden shadow-premium reveal-up delay-100 relative">
+                    <!-- Placeholder Map Image for visual elegance, acts as map replacement or iframe wrapper -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5976527582524!2d-34.9126!3d-8.0381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMDInMTcuMiJTIDM0wrA1NCw0NS40Ilc!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="absolute inset-0 grayscale contrast-125 opacity-80 mix-blend-multiply"></iframe>
+                    <!-- Overlay to maintain aesthetic tone -->
+                    <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light/80 pt-16 pb-8 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 border-b border-light/10 pb-12 mb-8">
+            <div class="max-w-sm">
+                <a href="#" class="text-2xl font-serif font-bold text-light tracking-widest block mb-4">AURA<span class="text-accent font-sans text-lg ml-1">SPA</span></a>
+                <p class="text-sm font-light leading-relaxed">Onde a ciência encontra o acolhimento. Cuidamos da sua pele e elevamos sua autoestima com resultados elegantes e naturais em Casa Forte, Recife.</p>
+            </div>
+            
+            <div class="flex gap-16 flex-wrap">
+                <div>
+                    <p class="font-serif text-lg text-light mb-4">Links</p>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#sobre" class="hover:text-accent transition-colors">A Clínica</a></li>
+                        <li><a href="#servicos" class="hover:text-accent transition-colors">Tratamentos</a></li>
+                        <li><a href="#depoimentos" class="hover:text-accent transition-colors">Avaliações</a></li>
+                        <li><a href="#faq" class="hover:text-accent transition-colors">Dúvidas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-serif text-lg text-light mb-4">Social</p>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#" class="hover:text-accent transition-colors flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> Instagram</a></li>
+                        <li><a href="#" class="hover:text-accent transition-colors flex items-center gap-2"><i data-lucide="facebook" class="w-4 h-4"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-light/50">
+            <p>&copy; 2026 Aura Spa. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://www.lucianofvital.com.br/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-white transition-colors border-b border-accent/30 hover:border-white">Luciano F Vital</a></p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5581900000000" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300 group flex items-center justify-center" aria-label="Fale conosco no WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <!-- Pulse ring -->
+        <span class="absolute inset-0 rounded-full border-2 border-[#25D366] animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75"></span>
+    </a>
+
+    <!-- ========================================================================= -->
+<!-- WIDGET SITE DEMO - COPIAR E COLAR NO FIM DO <body>                        -->
+<!-- ========================================================================= -->
+<div id="lv-demo-widget-wrapper">
+  
+  <!-- ESTILOS (Isolados e Parametrizados) -->
+  <style>
+    /* 
+      1. VARIÁVEIS DE PERSONALIZAÇÃO 
+      Altere os valores abaixo para customizar o componente via CSS 
+    */
+    #lv-demo-widget {
+      /* Cores */
+      --lv-btn-bg: #FBBF24; /* Amarelo chamativo */
+      --lv-btn-icon: #000000; /* Preto */
+      --lv-balloon-bg: #FFFFFF;
+      --lv-text-main: #111827;
+      --lv-text-muted: #6B7280;
+      --lv-text-highlight: #2563EB;
+      
+      /* Dimensões */
+      --lv-btn-size: 64px;
+      --lv-radius: 16px;
+      
+      /* Posição (Padrão: Esquerda) */
+      --lv-pos-bottom: 24px;
+      --lv-pos-left: 24px;
+      --lv-pos-right: auto; /* Para usar na direita: troque auto e 24px */
+      
+      /* Animação */
+      --lv-anim-speed: 0.4s;
+    }
+
+    /* 2. ESTRUTURA E RESET ISOLADO */
+    #lv-demo-widget {
+      position: fixed;
+      bottom: var(--lv-pos-bottom);
+      left: var(--lv-pos-left);
+      right: var(--lv-pos-right);
+      z-index: 999999; /* Extremamente alto para ficar sobre tudo */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      pointer-events: none; /* Permite clicar nos elementos atrás do container invisível */
+    }
+
+    /* 3. BALÃO DE MENSAGEM */
+    .lv-demo-balloon {
+      pointer-events: auto;
+      background: var(--lv-balloon-bg);
+      border-radius: var(--lv-radius);
+      width: 280px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.05);
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+      transition: opacity var(--lv-anim-speed) cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform var(--lv-anim-speed) cubic-bezier(0.16, 1, 0.3, 1),
+                  visibility var(--lv-anim-speed);
+      visibility: hidden;
+      will-change: transform, opacity;
+    }
+
+    /* Modificador para quando o balão estiver visível */
+    .lv-demo-balloon.lv-show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      visibility: visible;
+    }
+
+    /* Ponteiro (Triângulo apontando para o botão) */
+    .lv-demo-balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: calc(var(--lv-btn-size) / 2); /* Alinha com o centro do botão */
+      width: 12px;
+      height: 12px;
+      background: var(--lv-balloon-bg);
+      transform: rotate(45deg);
+      border-right: 1px solid rgba(0,0,0,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      margin-left: -6px;
+    }
+
+    /* Botão de Fechar o Balão */
+    .lv-demo-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      border: none;
+      background: transparent;
+      color: var(--lv-text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s, color 0.2s;
+      z-index: 2;
+    }
+    .lv-demo-close:hover {
+      background: rgba(0,0,0,0.05);
+      color: var(--lv-text-main);
+    }
+    .lv-demo-close:focus-visible {
+      outline: 2px solid var(--lv-text-highlight);
+    }
+
+    /* Área clicável do conteúdo */
+    .lv-demo-content {
+      padding: 20px;
+      cursor: pointer;
+      border-radius: var(--lv-radius);
+      transition: background 0.2s;
+    }
+    .lv-demo-content:hover {
+      background: rgba(0,0,0,0.02);
+    }
+    .lv-demo-content:focus-visible {
+      outline: 2px solid var(--lv-text-highlight);
+    }
+
+    /* Tipografia interna do balão */
+    .lv-demo-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--lv-text-main);
+      margin: 0 0 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lv-demo-desc {
+      font-size: 14px;
+      color: var(--lv-text-muted);
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+    .lv-demo-author {
+      font-size: 12px;
+      color: var(--lv-text-muted);
+      margin: 0;
+      font-weight: 500;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 12px;
+    }
+
+    /* 4. BOTÃO FLUTUANTE */
+    .lv-demo-btn {
+      pointer-events: auto;
+      width: var(--lv-btn-size);
+      height: var(--lv-btn-size);
+      border-radius: 50%;
+      background-color: var(--lv-btn-bg);
+      color: var(--lv-btn-icon);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s;
+      position: relative;
+    }
+
+    /* Hover e Active */
+    .lv-demo-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .lv-demo-btn:active {
+      transform: scale(0.95);
+    }
+    .lv-demo-btn:focus-visible {
+      outline: 3px solid var(--lv-text-main);
+      outline-offset: 4px;
+    }
+
+    /* Animação Pulsante Fininha (Premium) */
+    .lv-pulse-anim {
+      animation: lv-pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+    @keyframes lv-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(251, 191, 36, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
+    }
+
+    /* Ícone interno */
+    .lv-demo-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    /* Responsividade - Ajuste seguro para Mobile */
+    @media (max-width: 480px) {
+      .lv-demo-balloon {
+        width: calc(100vw - 48px); /* Respeita as margens da tela */
+        max-width: 320px;
+      }
+    }
+  </style>
+
+  <!-- HTML DO COMPONENTE -->
+  <div id="lv-demo-widget" aria-label="Demonstração do Site" role="region">
+    
+    <!-- Balão Flutuante -->
+    <div id="lv-demo-balloon" class="lv-demo-balloon" role="dialog" aria-live="polite">
+      <!-- Botão Fechar -->
+      <button id="lv-demo-close" class="lv-demo-close" aria-label="Fechar mensagem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <!-- Conteúdo (Clicável) -->
+      <div id="lv-demo-content" class="lv-demo-content" role="button" tabindex="0" aria-label="Adquirir versão completa do site">
+        <h4 class="lv-demo-title">
+          <span>🚀</span> Site DEMO
+        </h4>
+        <p class="lv-demo-desc">Adquira este site completo clicando aqui.</p>
+        <p class="lv-demo-author">Criado por LucianoFVital.</p>
+      </div>
+    </div>
+
+    <!-- Botão Principal -->
+    <button id="lv-demo-btn" class="lv-demo-btn lv-pulse-anim" aria-label="Abrir demonstração do site">
+      <!-- Ícone Bootstrap: Megaphone -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- JAVASCRIPT (Isolado e Otimizado) -->
+  <!-- JAVASCRIPT (Isolado e Otimizado) -->
+  <script>
+    (function() {
+      // ==========================================
+      // CONFIGURAÇÕES DO SCRIPT
+      // ==========================================
+      const CONFIG = {
+        // Seu Link do WhatsApp
+        demoLink: "https://wa.me/5581995923434?text=Gostei%20do%20site!%20Quero%20no%20meu%20Dominio.",
+        delayMs: 3000,          // Tempo para abrir a PRIMEIRA vez (3 segundos)
+        reopenDelayMs: 6000     // Tempo para ABRIR DE NOVO após ser fechado (6 segundos)
+      };
+
+      // ==========================================
+      // SELETORES
+      // ==========================================
+      const widgetBox = document.getElementById('lv-demo-widget');
+      const balloon = document.getElementById('lv-demo-balloon');
+      const btnMain = document.getElementById('lv-demo-btn');
+      const btnClose = document.getElementById('lv-demo-close');
+      const contentArea = document.getElementById('lv-demo-content');
+
+      if (!widgetBox || !balloon || !btnMain || !btnClose || !contentArea) return;
+
+      // ==========================================
+      // LÓGICA DE ABERTURA E FECHAMENTO
+      // ==========================================
+      
+      // Função para exibir o balão
+      const showBalloon = () => {
+        balloon.classList.add('lv-show');
+        // Remove a animação de pulse quando o balão abre
+        btnMain.classList.remove('lv-pulse-anim');
+      };
+
+      // Função para fechar o balão e programar a reabertura
+      const closeBalloon = (e) => {
+        e.stopPropagation(); // Evita acionar o clique do botão principal por acidente
+        
+        // Esconde o balão
+        balloon.classList.remove('lv-show');
+        
+        // Devolve o efeito pulsante para o botão
+        btnMain.classList.add('lv-pulse-anim');
+
+        // MAGICA AQUI: Agenda a reabertura após 6 segundos (6000 milissegundos)
+        setTimeout(showBalloon, CONFIG.reopenDelayMs);
+      };
+
+      // Função principal de navegação (WhatsApp)
+      const navigateToLink = () => {
+        window.open(CONFIG.demoLink, '_blank', 'noopener,noreferrer');
+      };
+
+      // ==========================================
+      // EVENT LISTENERS
+      // ==========================================
+      
+      // Timer inicial (Abre após 3 segundos do carregamento da página)
+      setTimeout(showBalloon, CONFIG.delayMs);
+
+      // Clicar no botão X fecha o balão (e aciona os 6 segundos pra voltar)
+      btnClose.addEventListener('click', closeBalloon);
+
+      // Clicar no botão principal abre o link
+      btnMain.addEventListener('click', navigateToLink);
+
+      // Clicar no conteúdo do balão abre o link
+      contentArea.addEventListener('click', navigateToLink);
+
+      // Acessibilidade: Navegação por teclado
+      contentArea.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          navigateToLink();
+        }
+      });
+    })();
+  </script>
+</div>
+<!-- ========================================================================= -->
+
+    <!-- Scripts -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- App Script -->
+    <script src="script.js"></script>
+</body>
+</html>
